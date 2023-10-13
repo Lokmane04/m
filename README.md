@@ -1,4 +1,6 @@
-![Insightful Logo](/src/assets/png/black-logo.png)
+![Insightful Logo](/src/assets/png/white-logo.png)
+
+### InsightFul
 
 Insightful is a web application built using Vite, TypeScript, and React that provides an intuitive platform for task management. With Insightful, you can effortlessly manage your tasks, including adding new tasks, scheduling, and deleting completed tasks. Gain insights into your productivity by tracking your progress in different task categories.
 
