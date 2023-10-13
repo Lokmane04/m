@@ -1,27 +1,29 @@
-# React + TypeScript + Vite
+![Insightful Logo](/src/assets/png/black-logo.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Insightful is a web application built using Vite, TypeScript, and React that provides an intuitive platform for task management. With Insightful, you can effortlessly manage your tasks, including adding new tasks, scheduling, and deleting completed tasks. Gain insights into your productivity by tracking your progress in different task categories.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Efficient Task Management:** Easily add, schedule, and delete tasks, making it simple to organize and keep track of your to-dos.
 
-## Expanding the ESLint configuration
+- **Category-Based Tracking:** Group your tasks into categories and monitor your progress within each category.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **User-Friendly Interface:** A clean and intuitive UI ensures a seamless user experience.
 
-- Configure the top-level `parserOptions` property like this:
+- **Responsive Design:** Insightful is designed to work smoothly on various devices, including desktops, tablets, and mobile phones.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Getting Started
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+To get started with Insightful, follow these steps:
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) - Ensure you have Node.js installed on your machine.
+
+### Installation
+
+1. Clone this repository to your local machine:
+
+   `git clone https://github.com/your-username/insightful.git`
+
+- [Material Ui](https://mui.com/material-ui/) - `npm install @mui/material @emotion/react @emotion/styled`
