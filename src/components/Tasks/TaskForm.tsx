@@ -1,8 +1,9 @@
 import { Box, Button, TextField } from "@mui/material";
 import { useState } from "react";
+import { TaskFormTypes } from "../../types/TaskFormTypes";
 
 const TaskForm = () => {
-  const [inputFields, setInputFields] = useState<string>("");
+  const [inputFields, setInputFields] = useState<TaskFormTypes>();
   const [error, seterror] = useState<boolean>(false);
   const changeName = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.value === "") {
@@ -12,13 +13,13 @@ const TaskForm = () => {
     }
 
     event.preventDefault();
-    setInputFields(event.target.value);
+    // setInputFields({ ...inputFields, title: event.target.value });
   };
 
   const anyInputFieldEmpty = () => {
     var result = false;
 
-    if (inputFields === "") {
+    if (inputFields?.title === "") {
       seterror(true);
       result = true;
     } else {
@@ -29,34 +30,42 @@ const TaskForm = () => {
   };
 
   const resetFields = () => {
-    setInputFields("");
+    // setInputFields();
   };
 
   return (
-    <Box bgcolor="white" display="flex" flexDirection="column">
-      <TextField
-        required
-        label="Company Name"
-        margin="dense"
-        name="companyName"
-        value={inputFields}
-        onChange={changeName}
-        helperText={error ? "Company name is not allowed to be empty!" : ""}
-        error={error}
-      />
+    <Box
+      sx={{
+        ml: "22vw",
+        bgcolor: "#dfd",
+        display: "flex",
+        alignItems: "center",
+        width:
+      }}
+    >
+      <Box>
+        <TextField
+          fullWidth
+          required
+          label="Add a task"
+          value={inputFields}
+          onChange={changeName}
+          helperText={error ? "Company name is not allowed to be empty!" : ""}
+          error={error}
+        />
 
-      <Button
-        sx={{ alignSelf: "center" }}
-        variant="contained"
-        onClick={() => {
-          if (!anyInputFieldEmpty()) {
-            // onSubmitClick();
-            resetFields(); // This form is in a popover. The values should be resetted before the user open it again.
-          }
-        }}
-      >
-        Add a task
-      </Button>
+        <Button
+          sx={{ alignSelf: "center", mt: "20px" }}
+          variant="contained"
+          onClick={() => {
+            if (!anyInputFieldEmpty()) {
+              resetFields();
+            }
+          }}
+        >
+          Add a task
+        </Button>
+      </Box>
     </Box>
   );
 };

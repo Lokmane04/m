@@ -1,4 +1,4 @@
-import { Box, Chip } from "@mui/material";
+import { Box, Fab } from "@mui/material";
 import WhiteLogo from "../../../assets/png/white-logo.png";
 import AddIcon from "@mui/icons-material/Add";
 const TopBar = () => {
@@ -17,12 +17,10 @@ const TopBar = () => {
         }}
       >
         <img src={WhiteLogo} alt="insightful-logo" width="20%" height="auto" />
-        <Chip
-          color="secondary"
-          label={<AddIcon />}
-          sx={{ borderRadius: "50%", width: "50px", height: "50px" }}
-          title="add task"
-        ></Chip>
+
+        <Fab color="secondary" aria-label="add">
+          <AddIcon />
+        </Fab>
       </Box>
     </>
   );
