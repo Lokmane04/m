@@ -1,27 +1,36 @@
-import { Box, Button } from "@mui/material";
+import { Box, Chip } from "@mui/material";
 import { CATEGORIES } from "../../../data/DUMMY_DATA";
 const SideBar = () => {
+  const tagClickHandler = () => {};
   return (
     <Box
       sx={{
-        width: "21vw",
+        width: "22vw",
+        ml: "2vw",
         height: "94vh",
-        bgcolor: "#fff",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
       }}
     >
       {CATEGORIES.map((category) => {
+        const color = category.color;
         return (
-          <Button
-            variant="contained"
-            size="large"
-            key={category.color}
-            sx={{ mt: "20px", width: "220px" }}
-          >
-            {category.name}
-          </Button>
+          <>
+            <Chip
+              key={category.color}
+              variant="filled"
+              color="primary"
+              label={category.name.toUpperCase()}
+              onClick={tagClickHandler}
+              sx={{
+                mt: "20px",
+                width: "auto",
+                bgcolor: `${color}`,
+                minWidth: "100%",
+              }}
+            />
+          </>
         );
       })}
     </Box>

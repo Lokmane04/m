@@ -1,7 +1,7 @@
 export type CategoriesTypes = {
   tags:
-    | "mandatory "
-    | "optional "
+    | "mandatory"
+    | "optional"
     | "recommended"
     | "urgent"
     | "upcoming"

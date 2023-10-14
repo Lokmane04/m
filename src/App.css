@@ -4,5 +4,6 @@
   box-sizing: border-box;
 }
 body {
-  background: #253542;
+  background-color: #3c495f;
+  overflow: hidden;
 }

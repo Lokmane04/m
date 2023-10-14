@@ -12,6 +12,7 @@ const TopBar = () => {
           width: "auto",
           height: "6vh",
           margin: "2%",
+          ml: "35px",
           top: 0,
           left: 0,
         }}

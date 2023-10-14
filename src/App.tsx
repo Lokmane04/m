@@ -1,11 +1,11 @@
 import NavBar from "./components/layouts";
 import "./App.css";
-import TaskForm from "./components/Tasks/TaskForm";
+import Main from "./pages/main";
 function App() {
   return (
     <>
       <NavBar />
-      <TaskForm />
+      <Main />
     </>
   );
 }

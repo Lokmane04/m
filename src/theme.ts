@@ -2,10 +2,20 @@ import { createTheme, responsiveFontSizes } from "@mui/material";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#3c495f",
+      // grey
+      main: "#006D77",
+      light: "#DEE2FF",
     },
     secondary: {
-      main: "#90ADBB",
+      // violet calm
+      main: "#83C5BE",
+    },
+    info: {
+      // brown calm
+      main: "#EDF6F9",
+    },
+    success: {
+      main: "#E29578",
     },
   },
 });
