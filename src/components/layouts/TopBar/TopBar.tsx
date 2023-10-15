@@ -1,6 +1,7 @@
-import { Box, Fab } from "@mui/material";
+import { Box, Button, Fab } from "@mui/material";
 import WhiteLogo from "../../../assets/png/white-logo.png";
 import AddIcon from "@mui/icons-material/Add";
+import "../../../App.css";
 const TopBar = () => {
   return (
     <>
@@ -19,12 +20,13 @@ const TopBar = () => {
         <img
           src={WhiteLogo}
           alt="insightful-logo"
-          style={{ minWidth: "100px", maxWidth: "20%" }}
+          style={{ minWidth: "100px", maxWidth: "20%", flexShrink: 0 }}
         />
-
-        <Fab color="secondary" aria-label="add">
+        {/* <Button className="add-task-button"> */}
+        <Fab color="secondary" aria-label="Add a Task">
           <AddIcon />
         </Fab>
+        {/* </Button> */}
       </Box>
     </>
   );

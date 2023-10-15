@@ -3,19 +3,22 @@ const theme = createTheme({
   palette: {
     primary: {
       // grey
-      main: "#006D77",
+      main: "#254E70",
       light: "#DEE2FF",
     },
     secondary: {
       // violet calm
-      main: "#83C5BE",
+      main: "#8EE3EF",
     },
     info: {
       // brown calm
-      main: "#EDF6F9",
+      main: "#AEF3E7",
     },
     success: {
       main: "#E29578",
+    },
+    error: {
+      main: "#C33C54",
     },
   },
 });

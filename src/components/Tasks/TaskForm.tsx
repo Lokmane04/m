@@ -96,7 +96,11 @@ const TaskForm = () => {
           </Select>
         </FormControl>
         <Button
-          sx={{ alignSelf: "center", mt: "20px" }}
+          sx={{
+            my: "10px",
+            flexShrink: "0",
+            minWidth: "10%",
+          }}
           variant="contained"
           onClick={() => {
             if (!anyInputFieldEmpty()) {
@@ -105,6 +109,16 @@ const TaskForm = () => {
           }}
         >
           Add a task
+        </Button>
+        <Button
+          color="error"
+          sx={{ my: "10px", ml: "15px", flexShrink: "0", minWidth: "10%" }}
+          variant="contained"
+          onClick={() => {
+            resetFields();
+          }}
+        >
+          Clear
         </Button>
       </Box>
     </Box>

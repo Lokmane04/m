@@ -11,3 +11,11 @@ body {
   max-width: 80vw;
   margin: 0 auto;
 }
+.add-task-button {
+  transition: 0.5s;
+}
+.add-task-button:hover {
+  transform: scale(110%) rotate(50%);
+}
+@media (max-width: 1300px) {
+}

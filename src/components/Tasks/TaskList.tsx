@@ -4,7 +4,7 @@ const TaskList = () => {
   let ChipColor: string;
   return (
     <Box>
-      <List sx={{ maxWidth: "90%", ml: "3vw" }}>
+      <List>
         {initialFacts.map(({ id, text, source, createdIn, category }) => {
           CATEGORIES.map(({ name, color }) => {
             if (name === category) {
