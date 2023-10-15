@@ -7,7 +7,6 @@ const TaskList = () => {
       <List sx={{ maxWidth: "90%", ml: "3vw" }}>
         {initialFacts.map(({ id, text, source, createdIn, category }) => {
           CATEGORIES.map(({ name, color }) => {
-            console.log(name === category ? "1" : "2");
             if (name === category) {
               ChipColor = color;
               return ChipColor;
@@ -27,7 +26,18 @@ const TaskList = () => {
                 borderRadius: "15px",
               }}
             >
-              <Typography sx={{ minWidth: "500px" }}>{text}</Typography>
+              <Typography sx={{ minWidth: "500px" }}>
+                {text}
+                <Link
+                  ml={2}
+                  href={source}
+                  underline="hover"
+                  color="blueviolet"
+                  target="_blank"
+                >
+                  (Source)
+                </Link>
+              </Typography>
               <Chip
                 variant="filled"
                 color="primary"
@@ -40,16 +50,7 @@ const TaskList = () => {
                   mr: "5%",
                 }}
               />
-              <Typography variant="body1">
-                <Link
-                  href={source}
-                  underline="hover"
-                  color="blueviolet"
-                  target="_blank"
-                >
-                  (Source)
-                </Link>
-              </Typography>
+
               <Typography>{createdIn}</Typography>
             </ListItem>
           );

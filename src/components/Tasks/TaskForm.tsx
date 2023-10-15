@@ -1,6 +1,15 @@
-import { Box, Button, TextField } from "@mui/material";
+import {
+  Box,
+  Button,
+  TextField,
+  InputLabel,
+  Select,
+  MenuItem,
+  FormControl,
+} from "@mui/material";
 import { useState } from "react";
 import { TaskFormTypes, InitialFormValues } from "../../types/TaskFormTypes";
+import { CATEGORIES } from "../../data/DUMMY_DATA";
 
 const TaskForm = () => {
   const [inputFields, setInputFields] =
@@ -42,6 +51,7 @@ const TaskForm = () => {
         bgcolor: "#83C5BE",
         p: "20px",
         borderRadius: "15px",
+        mb: "20px",
       }}
     >
       <Box>
@@ -68,6 +78,7 @@ const TaskForm = () => {
           helperText="you can add description to your Task"
         />
         <TextField
+          sx={{ mb: "20px" }}
           color="primary"
           fullWidth
           label="Trustworthy source"
@@ -76,7 +87,14 @@ const TaskForm = () => {
           onChange={changeName}
           helperText="you can add a source you can refer to it"
         />
-
+        <FormControl fullWidth sx={{ mb: "20px" }}>
+          <InputLabel>Categories</InputLabel>
+          <Select value={inputFields.categories} label="Categories">
+            {CATEGORIES.map((category) => {
+              return <MenuItem value={10}>{category.name}</MenuItem>;
+            })}
+          </Select>
+        </FormControl>
         <Button
           sx={{ alignSelf: "center", mt: "20px" }}
           variant="contained"

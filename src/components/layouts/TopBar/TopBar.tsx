@@ -11,13 +11,16 @@ const TopBar = () => {
           alignItems: "center",
           width: "auto",
           height: "6vh",
-          margin: "2%",
-          ml: "35px",
+          m: "4% 1%",
           top: 0,
           left: 0,
         }}
       >
-        <img src={WhiteLogo} alt="insightful-logo" width="20%" height="auto" />
+        <img
+          src={WhiteLogo}
+          alt="insightful-logo"
+          style={{ minWidth: "100px", maxWidth: "20%" }}
+        />
 
         <Fab color="secondary" aria-label="add">
           <AddIcon />

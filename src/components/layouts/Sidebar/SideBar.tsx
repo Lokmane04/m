@@ -5,9 +5,6 @@ const SideBar = () => {
   return (
     <Box
       sx={{
-        width: "22vw",
-        ml: "2vw",
-        height: "94vh",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

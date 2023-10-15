@@ -6,10 +6,9 @@ const Main = () => {
   return (
     <Box
       sx={{
-        display: "flex",
-        width: "100vw",
-        height: "94vh",
-        justifyContent: "start",
+        display: "grid",
+        gridTemplateColumns: "250px 1fr",
+        gap: "50px",
       }}
     >
       <SideBar />
