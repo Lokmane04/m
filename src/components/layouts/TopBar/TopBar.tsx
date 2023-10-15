@@ -22,11 +22,9 @@ const TopBar = () => {
           alt="insightful-logo"
           style={{ minWidth: "100px", maxWidth: "20%", flexShrink: 0 }}
         />
-        {/* <Button className="add-task-button"> */}
-        <Fab color="secondary" aria-label="Add a Task">
+        <Fab className="btn" color="secondary" aria-label="Add a Task">
           <AddIcon />
         </Fab>
-        {/* </Button> */}
       </Box>
     </>
   );

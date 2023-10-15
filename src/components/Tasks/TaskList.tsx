@@ -1,5 +1,6 @@
 import { Box, List, ListItem, Typography, Link, Chip } from "@mui/material";
 import { initialFacts, CATEGORIES } from "../../data/DUMMY_DATA";
+import "../../App.css";
 const TaskList = () => {
   let ChipColor: string;
   return (
@@ -13,16 +14,32 @@ const TaskList = () => {
             }
           });
           return (
-            <ListItem
-              key={id}
-              sx={{
+            // <ListItem
+            //   // className="list-item"
+            //   key={id}
+            //   sx={
+            //     {
+            // display: "flex",
+            // flexDirection: "row",
+            // alignItems: "center",
+            // justifyContent: "space-between",
+            // gap: "15px",
+            // mb: "20px",
+            // bgcolor: "#83C5BE",
+            // borderRadius: "15px",
+            //     }
+            //   }
+            // >
+            <li
+              className="list-item"
+              style={{
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
-                justifyContent: "space-between",
+                height: "9vh",
                 gap: "15px",
-                mb: "20px",
-                bgcolor: "#83C5BE",
+                marginBottom: "20px",
+                backgroundColor: "#83C5BE",
                 borderRadius: "15px",
               }}
             >
@@ -52,7 +69,8 @@ const TaskList = () => {
               />
 
               <Typography>{createdIn}</Typography>
-            </ListItem>
+            </li>
+            // </ListItem>
           );
         })}
       </List>

@@ -11,11 +11,20 @@ body {
   max-width: 80vw;
   margin: 0 auto;
 }
-.add-task-button {
-  transition: 0.5s;
+.btn {
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.8s;
 }
-.add-task-button:hover {
-  transform: scale(110%) rotate(50%);
+
+.btn:active {
+  transform: scale(110%) rotate(45deg);
 }
 @media (max-width: 1300px) {
+  .list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background: #000;
+  }
 }
