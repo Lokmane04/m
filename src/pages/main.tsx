@@ -9,6 +9,7 @@ const Main = () => {
         display: "grid",
         gridTemplateColumns: "250px 1fr",
         gap: "50px",
+        mt: "2%",
       }}
     >
       <SideBar />

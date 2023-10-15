@@ -14,36 +14,8 @@ const TaskList = () => {
             }
           });
           return (
-            // <ListItem
-            //   // className="list-item"
-            //   key={id}
-            //   sx={
-            //     {
-            // display: "flex",
-            // flexDirection: "row",
-            // alignItems: "center",
-            // justifyContent: "space-between",
-            // gap: "15px",
-            // mb: "20px",
-            // bgcolor: "#83C5BE",
-            // borderRadius: "15px",
-            //     }
-            //   }
-            // >
-            <li
-              className="list-item"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                height: "9vh",
-                gap: "15px",
-                marginBottom: "20px",
-                backgroundColor: "#83C5BE",
-                borderRadius: "15px",
-              }}
-            >
-              <Typography sx={{ minWidth: "500px" }}>
+            <li key={id} className="list-item">
+              <Typography className="list-item-text" sx={{ minWidth: "500px" }}>
                 {text}
                 <Link
                   ml={2}
@@ -64,13 +36,11 @@ const TaskList = () => {
                   width: "auto",
                   mb: "15px",
                   bgcolor: `${ChipColor}`,
-                  mr: "5%",
                 }}
               />
 
-              <Typography>{createdIn}</Typography>
+              <Typography className="list-item-date">{createdIn}</Typography>
             </li>
-            // </ListItem>
           );
         })}
       </List>

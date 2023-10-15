@@ -91,7 +91,11 @@ const TaskForm = () => {
           <InputLabel>Categories</InputLabel>
           <Select value={inputFields.categories} label="Categories">
             {CATEGORIES.map((category) => {
-              return <MenuItem value={10}>{category.name}</MenuItem>;
+              return (
+                <MenuItem key={category.color} value={10}>
+                  {category.name}
+                </MenuItem>
+              );
             })}
           </Select>
         </FormControl>
