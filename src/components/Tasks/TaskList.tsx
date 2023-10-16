@@ -1,4 +1,4 @@
-import { Box, List, ListItem, Typography, Link, Chip } from "@mui/material";
+import { Box, List, Typography, Link, Chip } from "@mui/material";
 import { initialFacts, CATEGORIES } from "../../data/DUMMY_DATA";
 import "../../App.css";
 const TaskList = () => {

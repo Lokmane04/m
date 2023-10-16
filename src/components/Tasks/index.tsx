@@ -10,6 +10,7 @@ const Tasks = () => {
         flexDirection: "column",
         alignItems: "center",
         maxWidth: "65vw",
+        minWidth: "100px",
       }}
     >
       <TaskForm />

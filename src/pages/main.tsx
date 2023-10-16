@@ -4,14 +4,7 @@ import SideBar from "../components/layouts/Sidebar/SideBar";
 
 const Main = () => {
   return (
-    <Box
-      sx={{
-        display: "grid",
-        gridTemplateColumns: "250px 1fr",
-        gap: "50px",
-        mt: "2%",
-      }}
-    >
+    <Box className="main-layout">
       <SideBar />
       <Tasks />
     </Box>

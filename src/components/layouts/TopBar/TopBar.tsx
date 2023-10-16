@@ -1,8 +1,12 @@
-import { Box, Button, Fab } from "@mui/material";
+import { Toaster, toast } from "sonner";
+import { Box, Fab } from "@mui/material";
 import WhiteLogo from "../../../assets/png/white-logo.png";
 import AddIcon from "@mui/icons-material/Add";
 import "../../../App.css";
 const TopBar = () => {
+  const displayToastHandler = () => {
+    toast.success("The task was addes successfully");
+  };
   return (
     <Box
       sx={{
@@ -15,7 +19,13 @@ const TopBar = () => {
       }}
     >
       <img className="insightful-logo" src={WhiteLogo} alt="insightful-logo" />
-      <Fab className="btn" color="secondary" aria-label="Add a Task">
+      <Toaster richColors closeButton />
+      <Fab
+        onClick={displayToastHandler}
+        className="btn"
+        color="secondary"
+        aria-label="Add a Task"
+      >
         <AddIcon />
       </Fab>
     </Box>

@@ -57,11 +57,35 @@ body {
 }
 
 /* for smaller screens */
-@media (max-width: 1040px) {
+.top-bar {
+  width: 80vw;
+  background-color: #3c495f;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  padding: 2% 0;
+}
+.main-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 50px;
+  margin-top: 2%;
+}
+@media (max-width: 1060px) {
   .insightful-logo {
-    width: 40%;
+    width: auto;
+    height: 50%;
   }
-  body {
-    background-color: #fff;
+  .top-bar {
+    width: 60vw;
+    margin: 2% auto;
+  }
+  .main-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    width: 60vw;
+    margin: 2% auto;
   }
 }
