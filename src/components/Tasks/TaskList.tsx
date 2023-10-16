@@ -1,11 +1,11 @@
-import { Box, List, Typography, Link, Chip } from "@mui/material";
+import { Box, Typography, Link, Chip } from "@mui/material";
 import { initialFacts, CATEGORIES } from "../../data/DUMMY_DATA";
 import "../../App.css";
 const TaskList = () => {
   let ChipColor: string;
   return (
     <Box>
-      <List>
+      <ul className="list">
         {initialFacts.map(({ id, text, source, createdIn, category }) => {
           CATEGORIES.map(({ name, color }) => {
             if (name === category) {
@@ -43,7 +43,7 @@ const TaskList = () => {
             </li>
           );
         })}
-      </List>
+      </ul>
     </Box>
   );
 };

@@ -20,6 +20,10 @@ body {
 .btn:active {
   transform: scale(110%) rotate(45deg);
 }
+/* list */
+.list {
+  text-overflow: ellipsis;
+}
 .list-item {
   display: flex;
   align-items: center;
@@ -109,13 +113,21 @@ body {
   html {
     width: 110vw;
     margin: 0;
+    background: #000;
+  }
+  .list {
+    width: 50%;
   }
   .list-item {
-    width: 90vw;
+    flex-direction: column;
     margin: 5% auto;
+    padding: 5%;
+    width: 90vw;
+    overflow-x: hidden;
   }
   .list-item-text {
-    word-break: break-all;
-    width: 80%;
+    overflow-wrap: break-word !important;
+    inline-size: 40vw;
+    overflow-wrap: break-word;
   }
 }
