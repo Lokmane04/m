@@ -15,7 +15,7 @@ const TaskList = () => {
           });
           return (
             <li key={id} className="list-item">
-              <Typography className="list-item-text" sx={{ minWidth: "500px" }}>
+              <p className="list-item-text">
                 {text}
                 <Link
                   ml={2}
@@ -26,7 +26,7 @@ const TaskList = () => {
                 >
                   (Source)
                 </Link>
-              </Typography>
+              </p>
               <Chip
                 variant="filled"
                 color="primary"

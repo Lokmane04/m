@@ -19,7 +19,7 @@ const TopBar = () => {
       }}
     >
       <img className="insightful-logo" src={WhiteLogo} alt="insightful-logo" />
-      <Toaster richColors closeButton />
+      <Toaster richColors />
       <Fab
         onClick={displayToastHandler}
         className="btn"
