@@ -1,0 +1,1 @@
+// the best way to handle forms in react and then net ninja with supabase

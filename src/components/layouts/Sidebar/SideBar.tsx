@@ -1,5 +1,4 @@
 import { Box, Chip } from "@mui/material";
-import { CATEGORIES } from "../../../data/DUMMY_DATA";
 const SideBar = () => {
   const tagClickHandler = () => {};
   return (

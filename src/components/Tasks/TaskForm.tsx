@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { TaskFormTypes, InitialFormValues } from "../../types/TaskFormTypes";
-import { CATEGORIES } from "../../data/DUMMY_DATA";
 
 const TaskForm = () => {
   const [inputFields, setInputFields] =
