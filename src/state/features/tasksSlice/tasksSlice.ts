@@ -33,4 +33,3 @@ export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async () => {
   return { tasks, error };
 });
 export const tasksSliceReducer = tasksSlice.reducer;
-export const { addTask } = tasksSlice.actions;

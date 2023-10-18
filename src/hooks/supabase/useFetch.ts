@@ -1,4 +1,4 @@
-import { supabase } from "../utils/supabase/supabase.utils";
+import { supabase } from "../../utils/supabase/supabase.utils";
 export const useFetchData = async () => {
   try {
     //passing the returned value from this function to the context

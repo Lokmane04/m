@@ -52,8 +52,13 @@ const TaskList = () => {
                     >
                       (Source)
                     </Link>
-                    <Typography ml={2} color="primary" variant="subtitle2">
-                      {description}
+                    <Typography
+                      ml={2}
+                      mt={1}
+                      color="primary"
+                      variant="subtitle2"
+                    >
+                      Description: {description}
                     </Typography>
                   </p>
                   <Chip
@@ -67,7 +72,7 @@ const TaskList = () => {
                       bgcolor: `${ChipColor}`,
                     }}
                   />
-                  <Chip label={createdIn} />
+                  <Chip label={createdIn || 2023} />
                   <Typography className="list-item-date"></Typography>
                 </li>
               );
