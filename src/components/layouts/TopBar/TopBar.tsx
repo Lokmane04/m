@@ -5,7 +5,7 @@ import AddIcon from "@mui/icons-material/Add";
 import "../../../App.css";
 const TopBar = () => {
   const displayToastHandler = () => {
-    toast.success("The task was addes successfully");
+    toast.success("The task was added successfully");
   };
   return (
     <Box

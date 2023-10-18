@@ -1,9 +1,10 @@
 export type CategoriesTypes = {
-  tags:
-    | "mandatory"
-    | "optional"
-    | "recommended"
-    | "urgent"
-    | "upcoming"
-    | "delayed";
+  id: number;
+  name: string;
+  color: string;
+};
+export type CategoriesSliceTypes = {
+  loading: boolean;
+  error: string;
+  categories: CategoriesTypes[];
 };

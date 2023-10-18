@@ -9,8 +9,15 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { TaskFormTypes, InitialFormValues } from "../../types/TaskFormTypes";
+import { useAppSelector } from "../../hooks/redux-custom-hooks/hooks";
+import { CategoriesTypes } from "../../types/Categories";
 
 const TaskForm = () => {
+  const categories = useAppSelector((state: any) => state.categories);
+  const CATEGORIES = categories["categories"]["categories"];
+
+  //useState
+
   const [inputFields, setInputFields] =
     useState<TaskFormTypes>(InitialFormValues);
   const [error, seterror] = useState<boolean>(false);
@@ -89,13 +96,14 @@ const TaskForm = () => {
         <FormControl fullWidth sx={{ mb: "20px" }}>
           <InputLabel>Categories</InputLabel>
           <Select value={inputFields.categories} label="Categories">
-            {CATEGORIES.map((category) => {
-              return (
-                <MenuItem key={category.color} value={10}>
-                  {category.name}
-                </MenuItem>
-              );
-            })}
+            {CATEGORIES &&
+              CATEGORIES.map((category: CategoriesTypes) => {
+                return (
+                  <MenuItem key={category.color} value={10}>
+                    {category.name}
+                  </MenuItem>
+                );
+              })}
           </Select>
         </FormControl>
         <Button

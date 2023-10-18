@@ -1,21 +1,21 @@
 import { CategoriesTypes } from "./Categories";
 export type TaskFormTypes = {
+  id: number;
   title: string;
   description?: string;
-  source?: URL | "";
-  date: Date;
-  categories: CategoriesTypes;
+  source?: "";
+  createdIn: string;
+  category: string;
 };
 export type TasksFormTypes = {
   tasks: TaskFormTypes[] | [];
 };
 
 export const InitialFormValues: TaskFormTypes = {
+  id: Math.random() * 10000,
   title: "",
   description: "",
   source: "",
-  date: new Date(),
-  categories: {
-    tags: "optional",
-  },
+  createdIn: `${new Date()}`,
+  category: "optional",
 };
